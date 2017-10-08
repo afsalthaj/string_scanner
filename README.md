@@ -1,2 +1,2 @@
-# string_scanner
-String Scanner Kata as part of Simple Machines Apprenticeship!
+# string_scanner Kata
+String Scanner Kata as part of Simple Machines Apprenticeship
