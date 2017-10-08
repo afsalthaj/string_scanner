@@ -1,15 +1,22 @@
 class StringScanner
+
+  attr_accessor :string
+
   def initialize(string)
     @string = string
-    @scan_pointer = 0
-    @matched_string=[]
   end
 
   def eos?
-    @scan_pointer == @string.length
+    @string.empty?
   end
 
-  def scan
-    @scan_pointer+=1
+  def scan(regex)
+    unless @string.empty? || @string.nil?
+      match = @string[regex]
+      if @string.start_with? match
+        @string.sub!(match, '')
+        match
+      end
+    end
   end
 end
